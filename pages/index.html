@@ -108,7 +108,7 @@
     var range = Array.apply(null, Array(9)).map(function (_, i) {return i;});
     range.shift();
     range.forEach(function(entry) {
-      var sound = new Audio('https://cdn.kollmer.me/suspense_accents/mp3/suspense_accent_' + String(entry) + '.mp3')
+      var sound = new Audio('/static/' + String(entry) + '.mp3')
       allSuspenseAccents.push(sound);
     });
   </script>
