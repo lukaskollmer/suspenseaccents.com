@@ -21,10 +21,11 @@ const createButton = index => {
 }
 
 Array(8).fill().forEach((_, idx) => {
-  idx += 1
-  sounds.push(new Audio(`/static/${idx}.mp3`))
+  const rowNumber = idx / 4 < 1 ? 0 : 1
 
-  const rowNumber = (idx-1) / 4 < 1 ? 0 : 1
+  idx += 1
+
+  sounds.push(new Audio(`/static/${idx}.mp3`))
 
   document.getElementById(`row-${rowNumber}`).appendChild(createButton(idx))
 })
