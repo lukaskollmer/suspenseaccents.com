@@ -6,7 +6,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>Suspense Accents</title>
-  <meta name="description" content="All The Great Sound Effects. (Including SoftMatt)">
+  <meta name="description" content="All the great sound effects! (Including SoftMatt)">
   <meta name="author" content="Lukas Kollmer">
 
   <!-- Mobile Specific Metas
@@ -15,13 +15,12 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Chivo" rel="stylesheet">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="/static/css/skeleton.css">
   <link rel="stylesheet" href="/static/css/normalize.css">
-  <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,169 +28,36 @@
 
 
   <style media="screen">
-  #bonanza-link {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-
-    font-size: 40px;
-
-    opacity: 50%;
-    color: #B33530;
-
-    display: none;
+  body {
+    font-family: 'Chivo', sans-serif;
   }
 
   a.button {
-    /*background-color: red;*/
     width: 100%;
   }
-  /* Larger than mobile */
-  @media (min-width: 400px) {}
-
-  /* Larger than phablet */
-  @media (min-width: 550px) {}
-
-  /* Larger than tablet */
-  @media (min-width: 750px) {
-    #bonanza-link {
-      display: inline;
-    }
-  }
-
-  /* Larger than desktop */
-  @media (min-width: 1000px) {}
-
-  /* Larger than Desktop HD */
-  @media (min-width: 1200px) {}
-
-    #footer {
-      position: absolute;
-      top: auto;
-      left: 0px;
-      bottom: 0px;
-      right: auto;
-    }
   </style>
-
 </head>
 <body>
 
-
-  <!-- Suspense Accent scripts -->
-  <script type="text/javascript">
-  String.prototype.replaceAll = function(search, replace) {
-    if (replace === undefined) {
-        return this.toString();
-    }
-    return this.split(search).join(replace);
-  }
-  </script>
-
-  <script type="text/javascript">
-    var allSuspenseAccents = [];
-    var range = Array.apply(null, Array(9)).map(function (_, i) {return i;});
-    range.shift();
-    range.forEach(function(entry) {
-      var sound = new Audio('/static/' + String(entry) + '.mp3')
-      allSuspenseAccents.push(sound);
-    });
-  </script>
-
-  <script type="text/javascript">
-    function play_suspense_accent() {
-      var senderID = this.id;
-      var soundNumber = Number(senderID.replace('suspense-accent-', '')) - 1;
-      var audio = allSuspenseAccents[soundNumber];
-
-      var duration = audio.duration;
-
-      audio.play();
-      console.log("did finish");
-    }
-  </script>
-
-  <!-- END of Suspense Accent scripts -->
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <div class="row" style="margin-top: 20%;">
+
+    <div class="row" style="margin-top: 15%;">
       <div class="one-half column">
         <h1>Suspense Accents</h1>
       </div>
     </div>
 
-    <div class="row" style="margin-top: 10%;">
-      <div class="three columns">
-        <a class="button" id="suspense-accent-1" href="javascript:void(0);">
-          <p>Play #1</p>
-        </a>
-      </div>
-      <div class="three columns">
-        <a class="button" id="suspense-accent-2" href="javascript:void(0);">
-          <p>Play #2</p>
-        </a>
-      </div>
-      <div class="three columns">
-        <a class="button" id="suspense-accent-3" href="javascript:void(0);">
-          <p>Play #3</p>
-        </a>
-      </div>
-      <div class="three columns">
-        <a class="button" id="suspense-accent-4" href="javascript:void(0);">
-          <p>Play #4</p>
-        </a>
-      </div>
-    </div>
-    <div class="row" style="margin-top: 5%;">
-      <div class="three columns">
-        <a class="button" id="suspense-accent-5" href="javascript:void(0);">
-          <p>Play #5</p>
-        </a>
-      </div>
-      <div class="three columns">
-        <a class="button" id="suspense-accent-6" href="javascript:void(0);">
-          <p>Play #6</p>
-        </a>
-      </div>
-      <div class="three columns">
-        <a class="button" id="suspense-accent-7" href="javascript:void(0);">
-          <p>Play #7</p>
-        </a>
-      </div>
-      <div class="three columns">
-        <a class="button" id="suspense-accent-8" href="javascript:void(0);">
-          <p>Play #8</p>
-        </a>
-      </div>
-    </div>
+    <div id="row-0" class="row" style="margin-top: 8%;"></div>
+    <div id="row-1" class="row" style="margin-top: 5%;"></div>
 
     <div class="row" style="margin-top: 5%;">
       <div class="twelve columns">
         <p style="font-size: small;">Made by <a href="https://twitter.com/lukas_kollmer" target="_blank">Lukas Kollmer</a></p>
       </div>
     </div>
+
   </div>
 
-  <a id="bonanza-link" href="https://www.relay.fm/bonanza" target="_blank"><i class="fa fa-life-ring"></i></a>
-
-  <br>
-  <br>
-  <br>
-
-  <!-- Suspense accent button scripts -->
-  <script type="text/javascript">
-    var range = Array.apply(null, Array(9)).map(function (_, i) {return i;});
-    range.shift();
-    range.forEach(function(entry) {
-      var elementID = 'suspense-accent-' + String(entry);
-      document.getElementById(elementID).onclick = play_suspense_accent;
-    });
-  </script>
-  <!-- END Suspsnse accent button scripts -->
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="/static/js/main.js" charset="utf-8"></script>
 </body>
 </html>
