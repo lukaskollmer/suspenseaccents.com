@@ -12,10 +12,9 @@ const createButton = index => {
   button.classList.add("button")
   button.index = index
   text.innerHTML = `Play #${index}`
-  
-  button.onclick = sender => {
-    const sound = sounds[sender.path[1].index]
-    sound.play()
+
+  button.onclick = function() {
+    sounds[this.index].play()
   }
 
   return wrapper
